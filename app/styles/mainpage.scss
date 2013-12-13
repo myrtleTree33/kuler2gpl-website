@@ -1,0 +1,139 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "susy";
+
+// Define colors over here
+// Color-scheme - Mend 03
+$color-1: #fdfdfd;
+$color-2: #b9f5ee;
+$color-3: #66a9bf;
+$color-4: #3f474f;
+$color-5: #ff6157;
+
+$total-columns: 12;
+$column-width: 4em;
+$gutter-width: 0em;
+$grid-padding: 0;
+
+$container-width: 100%;
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@include font-face("Quicksand Regular", font-files("Quicksand-Regular.otf"));
+
+@include font-face("Bebas Neue", font-files("BebasNeue.otf"));
+
+@include font-face("Source Sans Pro", font-files("SourceSansPro-Regular.otf"));
+
+@include font-face("Not Courier Sans", font-files("NotCourierSans.otf"));
+
+code {
+    font-family: "Not Courier Sans";
+}
+
+pre {
+    @include border-radius(4px, 4px);
+    width: 100%;
+    background: url("../images/denim.png") $color-4;
+    max-width: 100%;
+    margin: 1em 0 1em 0;
+    padding-left: 1em;
+    @include box-shadow(
+    	rgba(black, 0.6) 0px 1px 7px 0px inset);
+    	//rgba(white, 0.5) 0px -1px 0px 1px inset);
+	border-bottom: rgba(white, 0.5) solid 1px;
+
+    code {
+        white-space: pre;
+        font-family: "Not Courier Sans";
+        color: $color-1;
+        display: block;
+    }
+}
+
+a {
+	text-decoration: none;
+	&:active, &:visited {
+		color: $color-1;
+	}	
+
+	&:hover {
+		color: $color-4;
+		
+	}
+	span {
+		text-decoration: underline;
+	}
+}
+
+body {
+    //background: url("../images/white_brick_wall.png") repeat $color-4;
+    background: $color-1;
+    font-family: "Source Sans Pro";
+    color: $color-4;
+}
+
+.page {
+    @include container;
+    header {
+        clear: both;
+        background: $color-3;
+        margin: 1.5em 0 1em 0;
+        padding: 1em 2em 1em 2em;
+        h1 {
+            font-family: "Bebas Neue", "Quicksand Regular";
+            color: $color-1;
+            text-align: center;
+            font-size: 3em;
+        }
+        span {
+        	display:block;
+        	max-width: 100%;
+        	text-align: right;
+        	font-style: italic;
+        	color: $color-1;
+        	
+        }
+        nav {}
+    }
+    section {
+        //@include span-columns(10 omega, 12);
+        clear: both;
+        margin: 0 4em 0 4em;
+        h2,h3,h4,h5,h6 {
+            font-family: "Bebas Neue", "Quicksand Regular";
+            font-size: 2em;
+            color: $color-5;
+            text-align: left;
+            margin: 1.2em 0 0.5em 0;
+            max-width: 12em;
+            @include border-radius(4px, 4px);
+        }
+        p {
+        	img.hero {
+        		@include border-radius(4px, 4px);
+        		max-width: 400px;
+        		background: white;
+	       		padding: 0.7em;
+	       		display: block;
+	       		margin-left: auto;
+	       		margin-right: auto;
+	       		border: 0.5em solid $color-5;
+        	}
+        }
+        article {}
+    }
+    footer {
+        //@include span-columns(2 omega, 12);
+        clear: both;
+        background: $color-5;
+        color: $color-1;
+        font-family: "Bebas Neue";
+        font-size: 2em;
+        text-align: right;
+        margin-top: 3em;
+        padding: 0.5em 1em 0.5em 1em;
+    }
+}

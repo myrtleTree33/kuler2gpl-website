@@ -1,0 +1,32 @@
+@import "compass";
+@import "susy";
+
+$lightBlue: #f3f2e8;
+$grey: #9c836e;
+
+a:link {
+    font-weight: bold;
+    text-decoration: none;
+    color: $lightBlue;
+}
+
+ul.lst li {
+	list-style: none;
+	list-style-type:none;
+    a {
+        display: block;
+        padding: 7px 4em 7px 7px;
+        border-bottom: 1px solid $lightBlue;
+        overflow: hidden;
+    }
+	span {
+		float: left;
+	}
+    em {
+    	float: right;
+        font-style: normal;
+        font-weight: normal;
+        color: $grey;
+    }
+}
+

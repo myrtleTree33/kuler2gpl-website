@@ -1,0 +1,57 @@
+<div class="page">
+    <header>
+        <h1>Kuler2gpl</h1>
+        <span>A NodeJS script that converts Adobe Kuler swatches to GIMP / Inkscape GPL swatches.</span>
+        <nav></nav>
+    </header>
+
+    <section>
+        <article>
+            <p>
+                <img class='hero' src='http://joeltong.org/kuler2gpl/img/hero-compressed.jpeg' />
+            </p>
+            <h2>What is it?</h2>
+            <p>
+                Converts Adobe Kuler ASE Color swatches to the GIMP / Inkscape GPL format.
+            </p>
+            <h2>Why?</h2>
+            <p>There wasn’t a tool available for Linux, so here’s one.</p>
+            <h2>Install</h2>
+            <pre>
+                <code>$ npm install -g kuler2gpl</code>
+            </pre>
+            <h2>Usage</h2>
+            <pre>
+                <code>$ kuler2gpl -i /path/to/input/directory</code>
+            </pre>
+            <p>
+                Kuler2gpl places the newly converted GPL swatch in the same directory, and walks the entire directory tree. All Adobe kuler files should end with
+                <code>.ase</code>
+                .
+            </p>
+            <h2>Help</h2>
+            <pre>
+                <code>$ kuler2gpl --help</code>
+            </pre>
+            <h2>Known issues</h2>
+            <p>
+                Currently, only swatches utilizing the RGB color space are supported. LAB color spaces will be supported in the future!
+            </p>
+            <h2>Bugs</h2>
+            <p>File on the bug tracker.</p>
+            <p>
+                <strong>License</strong>
+                : MIT
+            </p>
+            <p>
+                <strong>Author</strong>
+                : jhtong
+            </p>
+
+        </article>
+    </section>
+    <footer>
+        <a href='https://npmjs.org/package/kuler2gpl'>Download Kuler2GPL.  </a>
+        <a href='http://blog.joeltong.org/'>Visit my blog <span>here</span>.</a>
+    </footer>
+</div>
